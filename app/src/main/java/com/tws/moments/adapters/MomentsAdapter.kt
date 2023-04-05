@@ -14,7 +14,7 @@ import com.tws.moments.viewholders.TweetViewHolder
 private const val TYPE_TWEET = 1
 private const val TYPE_HEAD = 1000
 
-class MomentsAdapter() :
+class MomentsAdapter :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     var tweets: MutableList<TweetBean>? = null

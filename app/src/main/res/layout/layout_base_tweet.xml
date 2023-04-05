@@ -51,7 +51,8 @@
             android:maxLines="5"
             android:textColor="@color/colorTweetContent"
             android:textSize="14sp"
-            tools:ignore="MissingDefaultResource" />
+            tools:ignore="MissingDefaultResource"
+            tools:text="Lorem ipsum"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/imagesRecyclerView"

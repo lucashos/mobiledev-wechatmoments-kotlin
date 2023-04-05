@@ -4,11 +4,13 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.tws.moments.TWApplication
 import com.tws.moments.adapters.CommentsAdapter
 import com.tws.moments.adapters.ImagesAdapter
 import com.tws.moments.api.entry.ImagesBean
 import com.tws.moments.api.entry.TweetBean
+import com.tws.moments.api.entry.UserBean
 import com.tws.moments.databinding.LayoutBaseTweetBinding
 import com.tws.moments.utils.dip
 import com.tws.moments.views.itemdecoration.ImagesDecoration
@@ -29,10 +31,18 @@ class TweetViewHolder(private val binding: LayoutBaseTweetBinding) :
     private var imageLoader = TWApplication.imageLoader
     fun bind(tweet: TweetBean) {
         renderTextContent(tweet.content)
+        renderUserInformation(tweet.sender)
+        renderImages(tweet.images)
+        (binding.rvComments.adapter as CommentsAdapter).comments = tweet.comments ?: listOf()
     }
 
     private fun renderTextContent(content: String?) {
         binding.tvTweetContent.text = content
+    }
+
+    private fun renderUserInformation(user: UserBean) {
+        imageLoader.displayImage(user.avatar, binding.ivSenderAvatar)
+        binding.tvSenderNickname.text = user.nick
     }
 
     private fun renderImages(imagesBean: List<ImagesBean>?) {

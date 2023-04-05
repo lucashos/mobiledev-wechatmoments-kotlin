@@ -49,7 +49,9 @@ class MainViewModel(private val repository: MomentRepository) : ViewModel() {
                 null
             }
 
-            allTweets = result
+            allTweets = result?.filter {
+                !it.content.isNullOrEmpty() || !it.images.isNullOrEmpty()
+            }
 
             if ((allTweets?.size ?: 0) > PAGE_TWEET_COUNT) {
                 tweets.value = allTweets?.subList(0, PAGE_TWEET_COUNT)

@@ -1,0 +1,19 @@
+{
+  "name": "mobiledev-wechatmoments-kotlin",
+  "version": "1.0.0",
+  "description": "1. Android Studio Bumblebee (2021.1.1) - via [Android Developers](https://developer.android.com/studio)\r 2. Android SDK 31 and BuildTools 30.0.3 - via [Android SDK Manager](https://developer.android.com/studio/intro/update#sdk-manager)\r 3. Java JDK 11 - via [Azul OpenJDK](https://www.azul.com/downloads/?version=java-11-lts&package=jdk) or [Oracle Java Downloads](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)\r 4. npm - via [Node.js installer](https://nodejs.org/en/download/) or [nvm](https://github.com/nvm-sh/nvm#install--update-script)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techops-recsys-lateral-hiring/mobiledev-wechatmoments-kotlin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techops-recsys-lateral-hiring/mobiledev-wechatmoments-kotlin/issues"
+  },
+  "homepage": "https://github.com/techops-recsys-lateral-hiring/mobiledev-wechatmoments-kotlin#readme"
+}
